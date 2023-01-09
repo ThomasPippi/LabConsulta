@@ -13,7 +13,7 @@ export class RotasService {
   eventoURL = new EventEmitter<string>()
   eventoPro = new EventEmitter<number>()
   eventoDados = new EventEmitter<Pessoa>()
-  pessoa: Pessoa[] =[]
+  
 
   constructor() { }
 
