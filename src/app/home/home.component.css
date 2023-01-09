@@ -1,0 +1,38 @@
+.umponto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(43, 226, 89);
+    color: white;
+}
+
+.doispontos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(43, 226, 226);
+    color: white;
+}
+
+.invalido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(226, 43, 43);
+    color: white;
+}
+
+.dados{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2rem;
+}
