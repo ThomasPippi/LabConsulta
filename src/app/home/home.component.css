@@ -1,3 +1,16 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+span.cod{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+span.ponto{
+    font-weight: lighter;
+}
+
 .umponto{
     display: flex;
     flex-direction: column;
@@ -7,6 +20,7 @@
     height: 100vh;
     background-color: rgb(43, 226, 89);
     color: white;
+    font-size: 2rem;
 }
 
 .doispontos{
@@ -18,6 +32,7 @@
     height: 100vh;
     background-color: rgb(43, 226, 226);
     color: white;
+    font-size: 2rem;    
 }
 
 .invalido{
@@ -28,6 +43,17 @@
     height: 100vh;
     background-color: rgb(226, 43, 43);
     color: white;
+}
+span.codigo{
+    font-size: 30rem;
+    font-weight: bold;
+    opacity: .1;
+}
+
+span.texto{
+    position: absolute;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .dados{

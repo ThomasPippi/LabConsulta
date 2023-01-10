@@ -1,7 +1,8 @@
+import { RecursiveVisitor } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { VirtualTimeScheduler } from 'rxjs';
 import { Pessoa } from '../models/pessoa';
+import { Rvdd } from '../models/rvdd';
 import { RotasService } from '../services/rotas.service';
 
 @Component({
@@ -21,6 +22,11 @@ export class HomeComponent {
 
   codigo: string = '';
   eventoDados: Pessoa = new Pessoa();
+  rvdd: Rvdd = new Rvdd();
+  base64: string = this.rvdd.base64;
+  
+  obj = document.createElement('object');
+  link = document.createElement('a');
 
   ngOnInit(){
     //EVENT EMMITER SUBSCRIBE
@@ -43,9 +49,22 @@ export class HomeComponent {
       }
     } 
    );
-   
    console.log(this.route);
    this.rotaService.getCodigo(this.codigo);
   }
 
-}
+  convertPDF(){
+    this.obj.style.width = '100%';
+    this.obj.style.height = '842pt';
+    this.obj.type = 'application/pdf';
+    this.obj.data = 'data:application/pdf;base64,' + this.base64;
+    document.body.appendChild(this.obj);
+  }
+  downloadPDF(){
+  this.link.innerHTML = 'Download PDF file';
+  this.link.download = 'file.pdf';
+  this.link.href = 'data:application/octet-stream;base64,' + this.base64;
+  document.body.appendChild(this.link);
+  }
+
+} 

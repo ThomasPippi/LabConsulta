@@ -1,6 +1,7 @@
+<!-- <button (click)="convertPDF()">Baixar PDF</button> -->
 <div *ngIf="this.eventoURL != '' && this.eventoPro == 1 " class="umponto"> 
-    {{ this.codigo }} <br>
-    {{ this.eventoPro }} ponto <br>
+    <span class="cod">{{ this.codigo }}</span> <br>
+    <span class="ponto">{{ this.eventoPro }} ponto </span> <br>
     <div class="dados">
         {{ this.eventoDados.pessoaId }}
         {{ this.eventoDados.nomePessoa }}
@@ -10,8 +11,8 @@
     </div> 
 </div>
 <div *ngIf="this.eventoURL != '' && this.eventoPro == 2 " class="doispontos"> 
-    {{ this.codigo }} <br>
-    {{ this.eventoPro }} pontos <br>
+    <span class="cod">{{ this.codigo }}</span> <br>
+    <span class="ponto">{{ this.eventoPro }} pontos </span> <br>
     <div class="dados">
         {{ this.eventoDados.pessoaId }}
         {{ this.eventoDados.nomePessoa }}
@@ -21,5 +22,6 @@
     </div>   
 </div>
 <div *ngIf="this.eventoPro == 3 " class="invalido"> 
-    Código Inválido.
+    <span class="codigo">404</span>
+    <span class="texto">Código Inválido</span>
 </div>  
